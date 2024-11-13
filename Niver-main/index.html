@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>
+<body>
+  <!-- LUTA   -->
+  <div class="fight" id="fight">
+    <div class="containerLuta">
+      <div class="fightVS">
+        <div class="enemyHP">
+          <p class="status" id="hpInimigo">C4T-SING 80/80</p>
+        </div>
+        <div class="enemy-cat" id="enemyImg"></div>
+
+        <div class="heroHP">
+          <p class="status" id="hpAliado">HERO 80/80</p>
+        </div>
+        <div class="hero" id="heroCaseImg"></div>
+      </div>
+
+      <div class="dialog">
+        <img
+          src="https://clubedovideogame.com.br/wp-content/uploads/2020/02/Chrono_Trigger_Portraits_Lucca.png"
+        />
+        <div class="contTextDialog" id="contTextDialog">
+          <p id="textDialog">
+            <!--    dialogo txt        -->
+            Rápido, Aventureiro estamos com problemas no jardim do castelo,
+            detenha os monstros!
+          </p>
+          <div class="actions" id="actions">
+            <button onclick="startFight()">Ok!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Transição   -->
+  <div id="transition" class="transition"></div>
+
+  <!--  Login jogador  -->
+  <div class="loginJogador" id="loginJogador">
+    <audio autoplay loop id="meuAudio">
+      <source id="audioSource" src="assets/main.mp3" type="audio/mpeg" />
+      Seu navegador não suporta a reprodução de áudio.
+    </audio>
+    <img
+      src="https://cdn2.steamgriddb.com/file/sgdb-cdn/logo_thumb/0396df57e78b6d04b6854dd682e27b3c.png"
+      width="700px"
+    />
+    <p class="apresentation">
+      Olá <input type="text" placeholder="Aventureira" id="nameTag" />!
+      <br />
+      Você está pronta? para embarcar em uma aventura?
+      <br />
+      Acredito que você adoraria viajar no tempo, vamos lá, o que está
+      esperando?
+      <br />
+      <br />
+      <span class="warning" id="warning"
+        >Não esqueça de escrever o seu nome, aventureira</span
+      >
+    </p>
+
+    <button onclick="jogar()" class="jogar" id="jogar">Jogar</button>
+  </div>
+
+  <!-- Seleção de personagem   -->
+  <div class="selectChamp" id="selectChamp">
+    <div class="talkWihtPlayer" id="talkWihtPlayer"></div>
+
+    <span class="infoPls">
+      Clique sobre os botões para saber ver o seu personagem</span
+    >
+    <div class="buttons">
+      <button onclick="setCaracter(Chrono)">Chrono</button>
+      <button onclick="setCaracter(Jayle)">Jayle</button>
+      <button onclick="setCaracter(Marle)">Marle</button>
+      <button onclick="setCaracter(Lucca)">Lucca</button>
+      <button onclick="setCaracter(Frog)">Frog</button>
+      <button onclick="setCaracter(Robo)">Robo</button>
+      <button onclick="setCaracter(Ayla)">Ayla</button>
+      <button onclick="setCaracter(Magus)">Magus</button>
+    </div>
+
+    <div class="boxCaracter" id="boxCaracter"></div>
+    <button class="selected" id="selected" onclick="next()">Escolher</button>
+    <p id="AventuraBegin"></p>
+  </div>
+
+  <!--Botão de fim a ser trabalhado-->
+  <!--<div id="contTextDialog" class="endImage-container">
+    <img src="https://imgur.com/nYMNEJy.gif" alt="End" class="endImage" />
+    <div class="actions">
+      <button onclick="startFight()">Ok!</button>
+    </div>
+  </div>-->
+</body>
